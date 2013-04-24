@@ -1,22 +1,3 @@
-<!-- Nav Bar -->
-
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="nav-bar right">
-       <ul class="button-group">
-         <li><a href="/users" class="button">Usuarios</a></li>
-         <li><a href="/microposts" class="button">Microposts</a></li>
-         <li><a href="/microposts/new" class="button">Nuevo</a></li>
-        </ul>
-      </div>
-      <h1>Microposts<small></small></h1>
-      <hr />
-    </div>
-  </div>
-
-  <!-- End Nav -->
-
-
   <!-- Main Page Content and Sidebar -->
 
   <div class="row">
@@ -26,9 +7,9 @@
       <% @microposts.each do |micropost| %>
         <!-- Feed Entry -->
         <div class="row">
-          <div class="small-3 large-2 columns "><img src="" /></div> <!-- http://placehold.it/80x80&text=[img] -->
+          <div class="small-3 large-2 columns "><img src="http://placehold.it/80x80&text=[img]" /></div> <!-- http://placehold.it/80x80&text=[img] -->
           <div class="small-9 large-10 columns">
-            <p><strong><a href="/users/<%= micropost.user_id %>">Usuario</a> escribió:</strong> <%= micropost.content %></p>
+            <p><strong><a href="/users/<%= micropost.user_id %>">Usuario</a></strong><br> <%= micropost.content %></p>
             <ul class="inline-list">
               <li><a href="">Responder</a></li>
             </ul>
@@ -67,7 +48,6 @@
       <hr />
       <div class="row">
         <div class="large-6 columns">
-          <p>&copy; Powered by Foundation 4.</p>
         </div>
         <div class="large-6 columns">
           <ul class="inline-list right">
