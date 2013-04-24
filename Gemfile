@@ -19,7 +19,6 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'zurb-foundation', '~> 2.2'
 end
 
 gem 'jquery-rails'
