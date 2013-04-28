@@ -16,3 +16,23 @@
 //= require_tree .
 
 $(document).foundation();
+
+var createPost = function(c,id){
+		$.ajax({
+			type: 'POST',
+			url: '/microposts',
+			data: {micropost: {content: c,user_id: id}},
+			dataType: 'JSON'
+		}).done(function(){
+			console.log('Datos insertados');
+			$('.close-reveal-modal','#MicropostModal').click()
+		});
+};
+
+$('#postIt').click(function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		var content = $('#micropost_content').val();
+		var id = 6;
+		createPost(content,id);
+});
