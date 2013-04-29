@@ -1,15 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+  <div class="row">    
+    
+    <!-- Main Content Section -->
+    <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+    <div class="large-8 push-4 columns">
+    	<% @microposts.each do |micropost| %>
+        <!-- Feed Entry -->
+        <div class="row">
+          <div class="small-3 large-2 columns "><img src="/assets/80x80.gif" /></div>
+          <div class="small-9 large-10 columns">
+            <p><strong><a href="/users/<%= micropost.user_id %>"><%= micropost.user.name %></a></strong><br> <%= micropost.content %></p>
+            <ul class="inline-list">
+              <!-- <li><a href="">Responder</a></li> -->
+              <li><p class="timestamp">Creado hace <%= time_ago_in_words(micropost.created_at)%></p></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Feed Entry -->
+      <% end %>
+    </div>
+    <!-- Nav Sidebar -->
+    <!-- This is source ordered to be pulled to the left on larger screens -->
+    <div class="large-4 pull-8 columns">
+    	<p>
+		  <h3><%= @user.name %></h3>
+		</p>
 
+		<p>
+		  <b>Email:</b>
+		  <%= @user.email %>
+		</p>
+        
+    </div>
+    
+  </div>
+    
+  
+  <!-- Footer -->
+  
+  <footer class="row">
+
+  </footer>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -7,12 +7,12 @@
       <% @microposts.each do |micropost| %>
         <!-- Feed Entry -->
         <div class="row">
-          <div class="small-3 large-2 columns "><img src="/assets/80x80.gif" /></div> <!-- http://placehold.it/80x80&text=[img] -->
+          <div class="small-3 large-2 columns "><img src="/assets/80x80.gif" /></div>
           <div class="small-9 large-10 columns">
             <p><strong><a href="/users/<%= micropost.user_id %>"><%= micropost.user.name %></a></strong><br> <%= micropost.content %></p>
             <ul class="inline-list">
               <!-- <li><a href="">Responder</a></li> -->
-              <li><p class="timestamp">Creado <%= micropost.created_at %></p></li>
+              <li><p class="timestamp">Creado hace <%= time_ago_in_words(micropost.created_at)%></p></li>
             </ul>
           </div>
         </div>
@@ -31,7 +31,7 @@
       <ul class="side-nav">
         <li><a href="#">Siguiendo</a></li>
         <li><a href="#">Menciones</a></li>
-        <li><a href="#">Sugerencias</a></li>
+        <li><a href="#">Mensajes</a></li>
       </ul>
 
     </aside>
