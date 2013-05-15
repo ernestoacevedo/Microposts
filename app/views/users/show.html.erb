@@ -25,31 +25,33 @@
     <!-- This is source ordered to be pulled to the left on larger screens -->
     <div id="profile" class="large-5 pull-8 columns">
       <div id="header-profile" class="row">
-        <div class="small-5 columns">
+        <div class="small-4 columns">
           <img id="avatar" src="/assets/100x100.gif" />
         </div>
-        <div class="small-7 columns">
+        <div class="small-8 columns">
           <p>
           <h5><%= @user.name %></h5>
+          @<%= @user.name.downcase %>
           </p>
         </div>
       </div>
-      <strong>Biografía</strong>
+      <div id="bio">
+        <h6>Biografía</h6>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolorum, natus, esse odio sunt non nam ducimus optio autem reprehenderit quas sequi.</p>
-      <br>
-    	
-      <div class="row">
-        <div class="small-4 columns">
-          <p><%= @user.microposts.count %> Microposts</p>
-        </div>
-        <div class="small-4 columns">
-          <p>0 Siguiendo</p>
-        </div>
-        <div class="small-4 columns">
-          <p>0 Seguidores</p>
-        </div>
       </div>
-        
+      <div id="stats">
+        <div class="row">
+          <div class="small-4 columns">
+            <p><%= @user.microposts.count %> Microposts</p>
+          </div>
+          <div class="small-4 columns">
+            <p>0 Siguiendo</p>
+          </div>
+          <div class="small-4 columns">
+            <p>0 Seguidores</p>
+          </div>
+        </div>
+      </div>  
     </div>
 
   </div>
