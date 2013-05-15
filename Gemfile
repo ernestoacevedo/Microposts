@@ -41,6 +41,3 @@ end
 
 # To use debugger
 # gem 'debugger'
-
-# Flat UI
-gem 'flat-ui-rails'

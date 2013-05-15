@@ -5,7 +5,7 @@
     
     <!-- Main Content Section -->
     <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
-    <div class="large-8 push-4 columns">
+    <div id="timeline" class="large-7 push-5 columns">
     	<% @microposts.each do |micropost| %>
         <!-- Feed Entry -->
         <div class="row">
@@ -23,18 +23,35 @@
     </div>
     <!-- Nav Sidebar -->
     <!-- This is source ordered to be pulled to the left on larger screens -->
-    <div class="large-4 pull-8 columns">
-    	<p>
-		  <h3><%= @user.name %></h3>
-		</p>
-
-		<p>
-		  <b>Email:</b>
-		  <%= @user.email %>
-		</p>
+    <div id="profile" class="large-5 pull-8 columns">
+      <div id="header-profile" class="row">
+        <div class="small-5 columns">
+          <img id="avatar" src="/assets/100x100.gif" />
+        </div>
+        <div class="small-7 columns">
+          <p>
+          <h5><%= @user.name %></h5>
+          </p>
+        </div>
+      </div>
+      <strong>Biografía</strong>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolorum, natus, esse odio sunt non nam ducimus optio autem reprehenderit quas sequi.</p>
+      <br>
+    	
+      <div class="row">
+        <div class="small-4 columns">
+          <p><%= @user.microposts.count %> Microposts</p>
+        </div>
+        <div class="small-4 columns">
+          <p>0 Siguiendo</p>
+        </div>
+        <div class="small-4 columns">
+          <p>0 Seguidores</p>
+        </div>
+      </div>
         
     </div>
-    
+
   </div>
     
   

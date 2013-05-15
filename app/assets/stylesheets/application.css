@@ -12,4 +12,7 @@
  *= require_tree .
  */
  *= require foundation_and_overrides
- *= require flat-ui
+
+ .top-bar-section ul li a:hover {
+    background: darken(#2c3e50,20%);
+}
