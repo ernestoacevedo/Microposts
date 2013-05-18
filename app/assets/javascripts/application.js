@@ -15,6 +15,7 @@
 //= require foundation
 //= require_tree .
 
+
 $(document).foundation();
 
 var createPost = function(c,id){
