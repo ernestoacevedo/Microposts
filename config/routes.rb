@@ -1,4 +1,6 @@
 DemoApp::Application.routes.draw do
+  get "start/index"
+
   resources :microposts
   resources :users
 

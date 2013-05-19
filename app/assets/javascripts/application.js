@@ -37,3 +37,23 @@ $('#postIt').click(function(e){
 		var id = 6;
 		createPost(content,id);
 });
+
+function updateCountdown() {
+    // 140 is the max message length
+    var remaining = 140 - jQuery('#micropost_content').val().length;
+    if(remaining<0){
+    	$('#counter').css('color','red');
+    	$('#micropost_content').css('border','3px solid #e74c3c');
+    }
+    else{
+    	$('#counter').css('color','black');
+    	$('#micropost_content').css('border','1px solid #cccccc');
+    }
+    $('#counter').text(remaining);
+}
+
+$(document).ready(function(){
+    updateCountdown();
+    $('#micropost_content').change(updateCountdown);
+    $('#micropost_content').keyup(updateCountdown);
+});

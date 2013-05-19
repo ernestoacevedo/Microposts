@@ -23,7 +23,13 @@
 <body>
   <!-- New micropost modal -->
   <div id="MicropostModal" class="reveal-modal">
-    <h2>Nuevo Micropost</h2>
+    <div class="row">
+    <div class="large-6 columns">
+      <h2>Nuevo Micropost</h2>
+    </div>
+    <div class="large-1 offset-5 columns"><h5 id="counter"></h5></div>
+    </div>
+    
     <input id="micropost_content" name="micropost[content]" size="30" type="text" />
     <button id="postIt">Publicar</button>
     <a class="close-reveal-modal">&#215;</a>
