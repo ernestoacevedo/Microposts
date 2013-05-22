@@ -4,16 +4,26 @@
 
 $blanco: #FFFFFF;
 
+
 #timeline{
-	padding-top: 10px;
+	padding-top: 30px;
 	background-color: $blanco;
-	-moz-box-shadow: 10px 10px 5px #888;
-	-webkit-box-shadow: 10px 10px 5px #888;
-	box-shadow: 10px 10px 5px #888;
-}
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+} 
 
 #sidebar{
 	background-color: $blanco;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+#avatar-timeline{
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
 }
 
 

@@ -7,7 +7,7 @@
       <% @microposts.each do |micropost| %>
         <!-- Feed Entry -->
         <div class="row">
-          <div class="small-3 large-2 columns "><img src="/assets/80x80.gif" /></div>
+          <div id="avatar-timeline" class="small-3 large-2 columns "><img src="/assets/80x80.gif" /></div>
           <div class="small-9 large-10 columns">
             <p><strong><a href="/users/<%= micropost.user_id %>"><%= micropost.user.name %></a></strong><br> <%= micropost.content %></p>
             <ul class="inline-list">
@@ -45,4 +45,7 @@
   <!-- Footer -->
 
   <footer class="row">
+    <div class="large-12">
+        <p><br></p>
+    </div>
   </footer>
