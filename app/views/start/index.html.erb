@@ -1,10 +1,67 @@
-	
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
 
-	<div class="login">
+    <!-- Uncomment to make IE8 render like IE7 -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Microposts" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+<body>
+  <!--
+
+  <div id="MicropostModal" class="reveal-modal">
+    <div class="row">
+    <div class="large-6 columns">
+      <h2>Nuevo Micropost</h2>
+    </div>
+    <div class="large-1 offset-5 columns"><h5 id="counter"></h5></div>
+    </div>
+    
+    <input id="micropost_content" name="micropost[content]" size="30" type="text" />
+    <button id="postIt">Publicar</button>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+  <nav class="top-bar">
+    <ul class="title-area">
+
+      <li class="name">
+        <h1><a href="/">Microposts</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+
+      <ul class="left">
+      </ul>
+
+      <ul class="right">
+        <li class="divider hide-for-small"></li>
+        <li><a href="/">Inicio</a></li>
+        <li class="divider"></li>
+        <li class="has-form"><a id="newPost" class="fui-new-24" href="#" data-reveal-id="MicropostModal">  </a></li>
+      </ul>
+    </section>
+  </nav>
+  -->
+  <div class="login">
         <div class="login-screen">
           <div class="login-icon">
-            <img src="images/login/icon.png" alt="Welcome to Mail App" />
-            <h4>Welcome to <small>Mail App</small></h4>
           </div>
 
           <div class="login-form">
@@ -18,8 +75,13 @@
               <label class="login-field-icon fui-lock-16" for="login-pass"></label>
             </div>
 
-            <a class="btn btn-primary btn-large btn-block" href="#">Login</a>
+            <a class="btn" href="#">Login</a>
             <a class="login-link" href="#">Lost your password?</a>
           </div>
         </div>
-      </div>
+    </div>
+      
+    <%= javascript_include_tag "application" %>
+</body>
+</html>
+

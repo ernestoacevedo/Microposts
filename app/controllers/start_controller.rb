@@ -1,5 +1,7 @@
 class StartController < ApplicationController
-  def index
-  	render 'start/index'
-  end
+	layout nil
+  	layout 'application', :except => :view
+  	def index
+  		render 'start/index'
+  	end
 end
