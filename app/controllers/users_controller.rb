@@ -15,7 +15,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts
-    @title = " | Perfil de " + @user.name
 
     respond_to do |format|
       format.html # show.html.erb

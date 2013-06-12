@@ -1,4 +1,12 @@
 DemoApp::Application.routes.draw do
+  get "static_pages/index"
+
+  get "static_pages/contact"
+
+  get "static_pages/start"
+
+  get "contacto/index"
+
   get "start/index"
 
   resources :microposts
