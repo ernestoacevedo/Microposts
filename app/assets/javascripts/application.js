@@ -34,7 +34,7 @@ $('#postIt').click(function(e){
 		e.preventDefault();
 		e.stopPropagation();
 		var content = $('#micropost_content').val();
-		var id = 6;
+		var id = usuario;
 		createPost(content,id);
 });
 

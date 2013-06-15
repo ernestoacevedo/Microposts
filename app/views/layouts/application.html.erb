@@ -55,11 +55,11 @@
       <!-- Right Nav Section -->
       <ul class="right">
         <li class="divider hide-for-small"></li>
-        <li><a href="/">Inicio</a></li>
+        <li><a href="">Inicio</a></li>
+        <% if user_signed_in? %>
         <li class="divider"></li>
-        <li><a href="/users">Usuarios</a></li>
-        <li class="divider"></li>
-        <li><a href="/microposts">Microposts</a></li>
+        <li><a href="#"><%= current_user.name%></a></li>
+        <% end %>
         <li class="divider"></li>
         <li class="has-form"><a id="newPost" class="fui-new-24" href="#" data-reveal-id="MicropostModal">  </a></li>
       </ul>
@@ -69,7 +69,9 @@
 
     <%= yield %>
 
-    
+    <script type="text/javascript">
+      
+    </script>
     <%= javascript_include_tag "application" %>
 </body>
 </html>

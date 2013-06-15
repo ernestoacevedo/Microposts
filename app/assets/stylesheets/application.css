@@ -10,9 +10,9 @@
  *
  *= require_self
  *= require_tree .
- */
  *= require foundation_and_overrides
  *= require flat-ui
+  */
  import url('flat-ui.css');
 
  .top-bar-section ul li a:hover {
@@ -21,4 +21,7 @@
 
 #newPost{
 	font-size: 16px;
+}
+
+#MicropostModal{
 }

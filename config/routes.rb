@@ -1,4 +1,8 @@
 DemoApp::Application.routes.draw do
+  devise_for :users
+
+  get "login/index"
+
   get "static_pages/index"
 
   get "static_pages/contact"

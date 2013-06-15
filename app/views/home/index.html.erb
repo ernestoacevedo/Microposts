@@ -26,8 +26,9 @@
     <!-- Sidebar -->
 
     <aside id="sidebar" class="large-3 columns small-offset-1">
-
-      <h5>@Usuario</h5>
+      <% if user_signed_in? %>
+          <h5>@<%= current_user.name%></h5>
+      <% end %>
       <ul class="side-nav">
         <li><a href="#">Siguiendo</a></li>
         <li><a href="#">Menciones</a></li>
