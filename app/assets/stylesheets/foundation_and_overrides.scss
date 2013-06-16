@@ -496,7 +496,7 @@ $paragraph-margin-bottom: emCalc(10px);
 
 // We use these to control styles for the list elements.
 // $f-dropdown-list-style: none;
-// $f-dropdown-font-color: #555;
+$f-dropdown-font-color: #FFF;
 // $f-dropdown-font-size: emCalc(14px);
 // $f-dropdown-list-padding: emCalc(5px) emCalc(10px);
 // $f-dropdown-line-height: emCalc(18px);
@@ -988,9 +988,9 @@ $topbar-link-color: #fff;
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: #333;
-$topbar-dropdown-link-color: #2c3e50;
+$topbar-dropdown-link-color: #FFF;
 // $topbar-dropdown-toggle-size: 5px;
-$topbar-dropdown-toggle-color: #2c3e50;
+// $topbar-dropdown-toggle-color: #2c3e50;
 // $topbar-dropdown-toggle-alpha: 0.5;
 // $dropdown-label-color: #555;
 

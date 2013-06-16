@@ -53,16 +53,27 @@
       </ul>
 
       <!-- Right Nav Section -->
+      <% if user_signed_in? %>
       <ul class="right">
         <li class="divider hide-for-small"></li>
-        <li><a href="">Inicio</a></li>
-        <% if user_signed_in? %>
+        <li><a href="/">Inicio</a></li>
+        
         <li class="divider"></li>
-        <li><a href="#"><%= current_user.name%></a></li>
-        <% end %>
+        <li class="has-dropdown"><a href="/users/<%= current_user.id%>"><%= current_user.name%></a>
+        <ul class="dropdown">
+        <li><a href="/users/edit">Editar cuenta</a></li>
+        <li class="divider"></li>
+        <li><a href="/users/sign_out">Cerrar sesión</a></li>
+        </ul>
+        </li>
         <li class="divider"></li>
         <li class="has-form"><a id="newPost" class="fui-new-24" href="#" data-reveal-id="MicropostModal">  </a></li>
       </ul>
+      <% else %>
+        <ul class="right">
+          <li><a href="/users/sign_in">Iniciar sesión</a></li>
+        </ul>
+      <% end %>
     </section>
   </nav>
   <!-- End Navigation -->
@@ -70,7 +81,9 @@
     <%= yield %>
 
     <script type="text/javascript">
-      
+      <% if user_signed_in? %>
+        var usuario = <%= current_user.id %>
+      <% end %>
     </script>
     <%= javascript_include_tag "application" %>
 </body>
